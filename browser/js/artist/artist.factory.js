@@ -21,6 +21,8 @@ juke.factory('ArtistFactory', function ($http, $q, AlbumFactory, SongFactory) {
       var albums = results[2].map(AlbumFactory.convert);
       artist.songs = songs;
       artist.albums = albums;
+      console.log(artist);
+      console.log(artist.songs);
       return artist;
     });
   };
