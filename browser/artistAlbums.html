@@ -2,7 +2,7 @@
             <h3>Albums</h3>
             <div class="row">
               <div class="col-xs-4" ng-repeat="album in artist.albums">
-                <a class="thumbnail" href="#" ng-click="viewOneAlbum(album)">
+                <a class="thumbnail" ui-sref="artist({albumId: album.id})">
                   <img ng-src="{{ album.imageUrl }}">
                   <div class="caption">
                     <h5>

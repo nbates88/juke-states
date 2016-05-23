@@ -96,9 +96,6 @@ juke.config(function($stateProvider){
 			    }
 			};
 
-			$scope.viewOneAlbum = function (album) {
-			    // $rootScope.$broadcast('viewSwap', { name: album.name, id: album.id });
-			};
 		}
 	})
 	.state('artist.albums', {
@@ -116,7 +113,7 @@ juke.config(function($stateProvider){
 	})
 	.state('artist.songs', {
 		url: '/artists/:artistId/songs',
-		templateUrl: 'artistSongs.html',
+		templateUrl: '/artistSongs.html',
 		resolve: {
 			artist_songs: function(ArtistFactory, $stateParams){
 				var artistId = $stateParams.artistId;
